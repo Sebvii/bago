@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Navbar"
+        tools:targetApi="31" >
+        <activity
+            android:name=".CommunityProfileFragment"
+            android:exported="false" />
+        <activity
+            android:name=".CommunityFoodFragment"
+            android:exported="false" />
+        <activity
+            android:name=".Environment"
+            android:exported="false" />
+        <activity
+            android:name=".Barrier"
+            android:exported="false" />
+        <activity
+            android:name=".Jar"
+            android:exported="false" />
+        <activity
+            android:name=".Exp"
+            android:exported="false" />
+        <activity
+            android:name=".Weather"
+            android:exported="false" />
+        <activity
+            android:name=".Ice"
+            android:exported="false" />
+        <activity
+            android:name=".Sphere"
+            android:exported="false" />
+        <activity
+            android:name=".SnacksFragment"
+            android:exported="false" />
+        <activity
+            android:name=".DinnerFragment"
+            android:exported="false" />
+        <activity
+            android:name=".LunchFragment"
+            android:exported="false" />
+        <activity
+            android:name=".TransportationFragment"
+            android:exported="false" />
+        <activity
+            android:name=".BreakfastFragment"
+            android:exported="false" />
+
+        <activity
+            android:name=".FoodTwoFragment"
+            android:exported="false" />
+        <activity
+            android:name=".FoodOneFragment"
+            android:exported="false" />
+        <activity
+            android:name=".PlayMaker"
+            android:exported="false" />
+        <activity
+            android:name=".Wani"
+            android:exported="false" />
+        <activity
+            android:name=".Masugid"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileTermsAndCondition"
+            android:exported="false" />
+        <activity
+            android:name=".EditProfile"
+            android:exported="false" />
+        <activity
+            android:name=".RewardThree"
+            android:exported="false" />
+        <activity
+            android:name=".RewardTwo"
+            android:exported="false" />
+        <activity
+            android:name=".RewardFive"
+            android:exported="false" />
+        <activity
+            android:name=".Food"
+            android:exported="false" />
+        <activity
+            android:name=".RewardsFragment"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileFragment"
+            android:exported="false" />
+        <activity
+            android:name=".FootPrintFragment"
+            android:exported="false" />
+        <activity
+            android:name=".HomeFragment"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

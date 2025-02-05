@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "231619020817",
+    "project_id": "latesnavbar",
+    "storage_bucket": "latesnavbar.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:231619020817:android:652889c8593d2e112289b0",
+        "android_client_info": {
+          "package_name": "com.example.navbar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwTb0rrYIWGMnz7Yd2p9rckuoUE-m27iQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

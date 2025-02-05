@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="custom_primary">#FFFFFFFF</color>
+    <color name="d9d9d9">#D9D9D9</color>
+    <color name="colorSelected">#FFFFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="home">#F9FFF1</color>
+    <color name="backgroundDarkGray">#4B4453</color>
+    <!-- Fully transparent color -->
+    <color name="transparent">#00FFFFFF</color>
+    <color name="green">#4CAF50</color>
+    <!-- Fully transparent background when the item is pressed (clicked) -->
+    <color name="colorPressed">#00FFFFFF</color>  <!-- Transparent -->
+    <color name="lightGreen">#90EE90</color>
+    <color name="Green">#97C97A</color>
+    <color name="lightgray">#D3D3D3</color>
+    <!-- Default background color (you can keep it solid or also transparent if needed) -->
+</resources>
