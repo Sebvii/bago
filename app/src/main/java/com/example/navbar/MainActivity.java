@@ -38,11 +38,11 @@ public class MainActivity extends AppCompatActivity {
                 selectedFragment = new HomeFragment();
             } else if (itemId == R.id.nav_footprint) {
                 selectedFragment = new FootPrintFragment();
-            } else if (itemId == R.id.nav_profile) {
-                selectedFragment = new ProfileFragment();
+            } else if (itemId == R.id.nav_games) {
+                selectedFragment = new GamesFragment();
             } else if (itemId == R.id.nav_community) {
                 selectedFragment = new CommunityFragment();
-            } else if (itemId == R.id.nav_games) {
+            } else if (itemId == R.id.nav_profile) {
                 selectedFragment = new ProfileFragment();
             }
             if (selectedFragment != null) {
@@ -82,11 +82,11 @@ public class MainActivity extends AppCompatActivity {
                 previousFragment = new HomeFragment();
             } else if (previousItemId == R.id.nav_footprint) {
                 previousFragment = new FootPrintFragment();
-            } else if (previousItemId == R.id.nav_profile) {
-                previousFragment = new ProfileFragment();
+            } else if (previousItemId == R.id.nav_games) {
+                previousFragment = new GamesFragment();
             } else if (previousItemId == R.id.nav_community) {
                 previousFragment = new CommunityFragment();
-            } else if (previousItemId == R.id.nav_games) {
+            } else if (previousItemId == R.id.nav_profile) {
                 previousFragment = new ProfileFragment();
             }
 

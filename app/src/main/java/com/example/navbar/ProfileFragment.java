@@ -26,8 +26,9 @@ public class ProfileFragment extends Fragment {
 
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.activity_profile_fragment, container, false);
     }
 
@@ -59,17 +60,29 @@ public class ProfileFragment extends Fragment {
         });
 
         // Delete Account Click Listener
-        deleteAccountContainer.setOnClickListener(v -> showDeleteConfirmation());
+        if (deleteAccountContainer != null) {
+            deleteAccountContainer.setOnClickListener(v -> showDeleteConfirmation());
+        }
 
         // Terms and Conditions Click Listener
-        termsConditionsContainer.setOnClickListener(v -> {
-            // Navigate to Terms and Conditions Activity
-            Intent intent = new Intent(getActivity(), ProfileTermsAndCondition.class);
-            startActivity(intent);
-        });
+        if (termsConditionsContainer != null) {
+            termsConditionsContainer.setOnClickListener(v -> {
+                // Navigate to Terms and Conditions Activity
+                Intent intent = new Intent(getActivity(), ProfileTermsAndCondition.class);
+                startActivity(intent);
+            });
+        }
 
-        // Logout Click Listener
-
+        // Logout Click Listener (Fix for missing implementation)
+        if (logoutContainer != null) {
+            logoutContainer.setOnClickListener(v -> {
+                // Handle logout logic here
+                // Example: Redirect to login screen
+                Intent intent = new Intent(getActivity(), Login.class);
+                startActivity(intent);
+                requireActivity().finish();
+            });
+        }
     }
 
     private void showDeleteConfirmation() {
@@ -85,8 +98,6 @@ public class ProfileFragment extends Fragment {
     private void performAccountDeletion() {
         // Simulate account deletion
         titleName.setText("Account Deleted");
-        titleEmail.setText("");
+        titleEmail.setText(""); // Ensure this TextView is initialized
     }
-
-
 }

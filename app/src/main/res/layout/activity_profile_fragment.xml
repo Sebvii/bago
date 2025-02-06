@@ -82,18 +82,19 @@
         app:layout_constraintBottom_toTopOf="@id/achievementsBox"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- View All -->
+
     <View
         android:id="@+id/achievementsBox"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginBottom="224dp"
+        android:layout_marginBottom="296dp"
         android:background="@drawable/rounded_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <!-- View All -->
     <TextView
         android:id="@+id/viewAll"
         android:layout_width="wrap_content"

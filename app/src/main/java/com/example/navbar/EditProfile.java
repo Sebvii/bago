@@ -5,93 +5,59 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
-
-
 
 public class EditProfile extends AppCompatActivity {
 
-    EditText editName, editEmail, editUsername, editPassword;
-    Button saveButton;
-    String nameUser, emailUser, usernameUser, passwordUser;
-
+    private EditText editName, editEmail, editUsername;
+    private Button saveButton;
+    private String nameUser, emailUser, usernameUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit_profile);
+        setContentView(R.layout.activity_edit_profile); // Set layout file
 
-
-
+        // Initialize UI elements
         editName = findViewById(R.id.firstNameInput);
         editEmail = findViewById(R.id.emailInput);
         editUsername = findViewById(R.id.lastNameInput);
         saveButton = findViewById(R.id.saveButton);
 
-        // Load user data from Intent
+        // Load user data
         showData();
 
-        saveButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Check if any field has been updated
-                if (isNameChanged() || isEmailChanged() || isPasswordChanged()) {
-                    Toast.makeText(EditProfile.this, "Saved", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(EditProfile.this, "No Changes Found", Toast.LENGTH_SHORT).show();
-                }
+        // Save button click event
+        saveButton.setOnClickListener(v -> {
+            if (isNameChanged() || isEmailChanged()) {
+                // Handle data saving logic (Firebase, SharedPreferences, etc.)
             }
         });
     }
 
-    public boolean isNameChanged() {
-        if (!nameUser.equals(editName.getText().toString())) {
-
-            nameUser = editName.getText().toString();
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    public boolean isEmailChanged() {
-        if (!emailUser.equals(editEmail.getText().toString())) { // Fixed comparison
-
-            emailUser = editEmail.getText().toString();
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    public boolean isPasswordChanged() {
-        if (!passwordUser.equals(editPassword.getText().toString())) {
-
-            passwordUser = editPassword.getText().toString();
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    public void showData() {
-        // Retrieve data from the Intent
+    private void showData() {
         Intent intent = getIntent();
 
+        // Retrieve data safely
         nameUser = intent.getStringExtra("name");
         emailUser = intent.getStringExtra("email");
         usernameUser = intent.getStringExtra("username");
-        passwordUser = intent.getStringExtra("password");
 
-        // Display the data in the respective EditText fields
-        editName.setText(nameUser);
-        editEmail.setText(emailUser);
-        editUsername.setText(usernameUser); // Optional: Disable editing for username
-        editPassword.setText(passwordUser);
+        // Ensure no null values are set to EditText fields
+        editName.setText(nameUser != null ? nameUser : "");
+        editEmail.setText(emailUser != null ? emailUser : "");
+        editEmail.setText(emailUser != null ? emailUser : "");
+        editUsername.setText(usernameUser != null ? usernameUser : "");
 
-        // Make username non-editable, if needed
+        // Make username non-editable
         editUsername.setEnabled(false);
+    }
+
+    private boolean isNameChanged() {
+        return nameUser != null && !nameUser.equals(editName.getText().toString());
+    }
+
+    private boolean isEmailChanged() {
+        return emailUser != null && !emailUser.equals(editEmail.getText().toString());
     }
 }

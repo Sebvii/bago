@@ -32,14 +32,6 @@ public class FootPrintFragment extends Fragment {
         ImageView arrowButton3 = view.findViewById(R.id.arrowButton3);
 
         // Set click listeners for each arrow button
-        arrowButton1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Navigate to TransportationFragment activity
-                Intent intent = new Intent(getActivity(), TransportationFragment.class);
-                startActivity(intent);
-            }
-        });
 
         arrowButton2.setOnClickListener(new View.OnClickListener() {
             @Override
